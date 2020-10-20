@@ -12,7 +12,7 @@ This tutorital shows how to make a simple 2D top player movement script. We can 
 - lastly create a another folder called 'Scripts', inside the folder right click, create, C# script and name it "playController". once you have created the scipt double click on teh script to get it open on Visual Studio.
 
 
-## 2.Coding
+## 2. Coding
 
 ## Making Variables
 - In the script, make a public flooat called 'speed' under 'public class' which used to handle how fast the player will move around the scene. After this make a private rigidbody 2D called 'rb' to handle the physic of the player. Then, create a private Vector2 called 'moveVelocity' to determine the velocity of the player.  
@@ -67,6 +67,6 @@ void Update()
     }
 }
 
-## Combining everthing together
+# 3. Combining everthing together
 - Add the scipt to the player by dragging the script in the add componet section of the player.
 - Test the character's movement by pressing any arrow key.
