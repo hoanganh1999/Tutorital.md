@@ -5,7 +5,7 @@ This tutorital shows how to make a simple 2D top player movement script. We can 
 
 - Once the unity is opened, staring this by generating a scene called 'Movement Scene'
 
-- Under the assets folder create a folder called 'Art/Sprites' by left clicking on the Assets then select create, folder. Then create a 2d sprite named 'Player' in the 'Art/Sprites' folder by going to the going to the top left of the unity and click on Sssets, then go to create, then go down and you will see Sprite, click on Sprite and make a square sprite and call it 'Player'.
+- Under the assets folder create a folder called 'Art/Sprites' by left clicking on the Assets then select create, folder. Then create a 2d sprite named 'Player' in the 'Art/Sprites' folder by going to the going to the top left of the unity and click on Assets, then go to create, then go down and you will see Sprite, click on Sprite and make a square sprite and call it 'Player'.
 
 - After that add a new rigidbody 2D to the 'Player' by going to the player, add component, add rigidbody 2D. After that go to the rigidbody 2D and set the Body Type from dynamic to kinematic this is so that the player can only be affected by the user input. 
 
