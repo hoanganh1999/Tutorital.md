@@ -34,7 +34,7 @@ public class PlayController : MonoBehaviour
     
     private Vector2 moveVelocity;
 
-## Start Method (Void Start)
+## Start Method
 - Next in the start method we need to say 'rb' variable is equal to the rigidbody 2D that is already attached to the player, the Body Type of the Rigidbody 2D is already changed from from dynamic to kinematic. this means the player can only get affected by the control/user input but however the player won't be affected by the any external force or the gravity.
 
     void Start()
@@ -44,3 +44,4 @@ public class PlayController : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
     }
 
+## Update Method
