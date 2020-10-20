@@ -21,15 +21,15 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using UnityEngine;
-    
-   public class PlayController : MonoBehaviour
+
+public class PlayController : MonoBehaviour
 {
     
-     public float speed;
+    public float speed;
     
-     private Rigidbody2D rb;
+    private Rigidbody2D rb;
     
-     private Vector2 moveVelocity;
+    private Vector2 moveVelocity;
 
 
 
