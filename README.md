@@ -15,7 +15,7 @@ This tutorital shows how to make a simple 2D top player movement script. We can 
 ## 2. Coding
 
 ## Making Variables
-- In the script, make a public flooat called 'speed' under 'public class' which used to handle how fast the player will move around the scene. After this make a private rigidbody 2D called 'rb' to handle the physic of the player. Then, create a private Vector2 called 'moveVelocity' to determine the velocity of the player.  
+- In the script, make a public float called 'speed' under 'public class' which used to handle how fast the player will move around the scene. After this make a private rigidbody 2D called 'rb' to handle the physic of the player. Then, create a private Vector2 called 'moveVelocity' to determine the velocity of the player.  
 
 using System.Collections;
   
