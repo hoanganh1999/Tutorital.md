@@ -19,9 +19,10 @@ This tutorital shows how to make a simple 2D top player movement script. We can 
 
 
  using System.Collections;
- using System.Collections.Generic;
- using System.Runtime.CompilerServices;
- using UnityEngine;
+using System.Collections.Generic;
+using System.Runtime.CompilerServices;
+
+using UnityEngine;
 
  public class PlayController : MonoBehaviour
  {
