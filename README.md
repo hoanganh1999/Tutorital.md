@@ -45,3 +45,28 @@ public class PlayController : MonoBehaviour
     }
 
 ## Update Method
+- At the start the update method, create a Vector2 variable called Input, this variable is used to detect where we want to move. Set the Vector2 variable called moveInput equal to a new Vector2 inside the bracket set the x value equal to Input.GetAxis horizontal. this means that whenever the player presses the right around key, the horizontal and input is equal to +1(position of the player in the horizontal axis will be +1, this will make the player move to the right). whenever the player presses the left around key the horizontal input is equal to -1 which mean the player will move to the left. Also, pressing the up arrow will give the move input vector a Y value of 1 and pressing the down button will give the move input vector a Y value of -1. 
+
+In additional, set the Vector 2 called 'moveVelocity' equal to the 'moveInput' Variable multiply with the speed 'variable' put '.normalized' after the 'moveInput' to stop the player from moving faster diagonally. 
+
+void Update()
+    {
+        
+        Vector2 moveInput = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxisRaw("Vertical"));
+        
+        moveVelocity = moveInput.normalized * speed;
+    }
+
+## FixedUpdate Method
+-All the script above is only for gathering player's input and to use this input to move the character in the environment by putting rb in the FixedUpdate Method and call the built in MovePosition funtion. Inside the bracket, state the current position of the player and add 'moveVelocity' to this position and time everything by Time.deltaTime. this is to make sure that the game run smoothly as long as the player hold down the arrow key. 
+
+ void FixedUpdate()
+    {
+        
+        rb.MovePosition(rb.position + moveVelocity * Time.deltaTime);
+    }
+}
+
+## Combining everthing together
+- Add the scipt to the player
+- Test the character's movement by pressing any arrow key.
