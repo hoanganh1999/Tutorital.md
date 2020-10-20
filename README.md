@@ -68,5 +68,5 @@ void Update()
 }
 
 ## Combining everthing together
-- Add the scipt to the player
+- Add the scipt to the player by dragging the script in the add componet section of the player.
 - Test the character's movement by pressing any arrow key.
