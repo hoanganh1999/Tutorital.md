@@ -89,6 +89,8 @@ void Start()
     }
 
 ## Combing everything together 
-- Add the scipt to the enemy by dragging the script in the add component section of the enemy.
+- Add the 'EnemyFollow' scipt to the enemy by dragging the script in the add component section of the enemy.
 - Change the speed of the enemy to 10 under the Inspector window. 
-- Test out teh script by moving the character to see if the enemy will follow the player or not. 
+- Add the 'PlayerController' script to the player. 
+- Change the Tag of the player to player under the Inspector window.
+- Test out the 'EnemyFollow' script by moving the player to see if the enemy will follow the player or not. 
