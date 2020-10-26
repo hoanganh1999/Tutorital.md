@@ -11,7 +11,7 @@ This tutorial shows you how to create an enemy in unity which follow the player'
 ## 2. The coding part 
 ### Note since this tutorial is all about 2d Enemy Follow AI, so I am just going to talk brieftly about the Player's movement Script. 
 - first add a Rigidbody 2D to the player then change the Body Type of the Rigidbody 2D from dynamic to kinematic.
-- Add the 'PlayerController' to the player then change the speed of the player to 10
+- Add the 'PlayerController' scipt to the player then change the speed of the player to 10
 
 using System.Collections;
 
