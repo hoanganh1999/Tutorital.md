@@ -9,7 +9,7 @@ This tutorial shows you how to create an enemy in unity which follow the player'
 - Go to the 'Player' sprite and under the Inspector window click on Tag and change it to player 
 - finally make a folder under the project windown called 'Scripts' by right click in assets windown, create, folder. after that, in the 'Scripts' folder create 2 scripts, one is called 'EnemyFollow' and the other one is called 'PlayerController'.
 
-### Note since this tutorial is all about 2D Enemy Follow AI, so I am just going to talk brieftly about the Player's movement Script. 
+### Note: since this tutorial is all about 2D Enemy Follow AI, so I am just going to talk brieftly about the Player's movement Script. 
 - First add a Rigidbody 2D to the player then change the Body Type of the Rigidbody 2D from dynamic to kinematic.
 - Add the 'PlayerController' scipt to the player then change the speed of the player to 10.
 
