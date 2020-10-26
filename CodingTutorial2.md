@@ -14,7 +14,9 @@ This tutorial shows you how to create an enemy in unity which follow the player'
 - Add the 'PlayerController' to the player then change the speed of the player to 10
 
 using System.Collections;
+
 using System.Collections.Generic;
+
 using System.Runtime.CompilerServices;
 
 using UnityEngine;
