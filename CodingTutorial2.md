@@ -57,6 +57,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class EnemyFollow : MonoBehaviour
+
 {
 
     public float speed;
@@ -69,6 +70,7 @@ public class EnemyFollow : MonoBehaviour
 - At the start of the start method, we have to make the 'target' variable equal to the gameobject that has a tag called player and the transform information of the object. This will allow the enemy to find the gameobject that has a tag called player. 
 
 void Start()
+
     {
     
          target = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>(); 
