@@ -88,6 +88,7 @@ void Start()
         }
     }
 
-
-
-
+## Combing everything together 
+- Add the scipt to the enemy by dragging the script in the add component section of the enemy.
+- Change the speed of the enemy to 10 under the Inspector window. 
+- Test out teh script by moving the character to see if the enemy will follow the player or not. 
