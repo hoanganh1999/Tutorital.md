@@ -6,12 +6,12 @@ This tutorial shows you how to create an enemy in unity which follow the player'
 - then create a folder called 'Art' under the project window. 
 - Then add 2 square sprites one called 'Player' and other called 'Enemy'.
 - Then change the colour of the 'Player' sprite to blue by clicking on the sprite, the go to Sprite Renderer then click on colour. Do the same thing with 'Enemy' sprite but change its colour to red.
-- Go to the 'Player' sprite and under the Inspector window click on tag and change it to player 
+- Go to the 'Player' sprite and under the Inspector window click on Tag and change it to player 
 - finally make a folder under the project windown called 'Scripts' by right click in assets windown, create, folder. after that, in the 'Scripts' folder create 2 scripts, one is called 'EnemyFollow' and the other one is called 'PlayerController'.
 
 ### Note since this tutorial is all about 2D Enemy Follow AI, so I am just going to talk brieftly about the Player's movement Script. 
 - First add a Rigidbody 2D to the player then change the Body Type of the Rigidbody 2D from dynamic to kinematic.
-- Add the 'PlayerController' scipt to the player then change the speed of the player to 10
+- Add the 'PlayerController' scipt to the player then change the speed of the player to 10.
 
 using System.Collections;
 
@@ -73,4 +73,21 @@ void Start()
     
          target = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>(); 
     }
+
+## Update Method
+-  In the update write transform.position this represents what position that you want the enemy to move. then set transform.position equal to Vector2.MoveTowards then inside the bracket say where you want the enemy to move from, to and at what speed. This is used to move the enemy character from his current position towards the target position(the player) at a fixed speed. Time.detltaTime is used to make sure that everything run smoothly. 
+
+- Add an if statement to inside the bracket we will check the distance of the enemy and its target which is the player. if that distance is greater than the 'stoppingDistance' variable then the enemy can continue to move toward the player and if the distance is smaller the ling of code to tell the enymy to move toward the player won't run which stops the enemy from moving toward the player.
+
+ void Update()
+ 
+    {
+        if (Vector2.Distance(transform.position, target.position) > stoppingDistance)
+        {
+            transform.position = Vector2.MoveTowards(transform.position, target.position, speed * Time.deltaTime);
+        }
+    }
+
+
+
 
