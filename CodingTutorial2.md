@@ -41,17 +41,15 @@ public class PlayController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //this means that whenever the player presses the left arrow key or the down arrow key, the horizontal and vertical input is equal to -1(position of the player along the hoorizontal and vertical axis will be -1, this will make the player move to the left or down).
-        //also whenever the player presses the right around key or the up arrow key, the horizontal input is equal to 1(position of the player in the horizontal axis and vertical will be +1, this will make the player move to the right or up).
+       
 
         Vector2 moveInput = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxisRaw("Vertical"));
-        //set the movevelocity equal to speed x with speed, note is the code was left as "moveVelocity = moveInput * speed" the player would move faster when moves diagonally (solving it by putting normalized)
+     
         moveVelocity = moveInput.normalized * speed;
     }
     void FixedUpdate()
     {
-        //this is to adjust the the physic 
-        //the player position adds with movevelocity(values) and times everything by time.deltatime
+      
         rb.MovePosition(rb.position + moveVelocity * Time.deltaTime);
     }
 }
