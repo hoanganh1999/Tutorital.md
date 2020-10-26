@@ -46,7 +46,7 @@ public class PlayController : MonoBehaviour
     }
 }
 
-## 2.The Coding part for the 2D Enemy AI Follow
+## 2. The Coding part for the 2D Enemy AI Follow
 ### Creating variables
 - In the Script, under the public class make a public float called 'speed' this is used to control how fast does the enemy follow after the player in the scenne. Then create a private transform called 'target' this vatiable is used to hold the obkect that the enemy is supposed to run after. after this create a public float called 'stoppingDistance' this this used to stop the enemy from coming to too close to the player.
 
@@ -77,9 +77,9 @@ void Start()
     }
 
 ### Update Method
--  In the update method write transform.position this represents what position that you want the enemy to move. then set transform.position equal to Vector2.MoveTowards then inside the brackets say where you want the enemy to move from, to and at what speed. This is used to move the enemy character from his current position towards the target position(the player) at a fixed speed. Time.detltaTime is used to make sure that everything run smoothly. 
+-  In the update method write transform.position this represents what position that you want the enemy to move. Then set transform.position equal to Vector2.MoveTowards then inside the brackets state where you want the enemy to move from a position to another position and also at what speed. This is used to move the enemy character from his current position towards the target position(the player) at a fixed speed. Time.detltaTime is used to make sure that everything run smoothly. 
 
-- Add an if statement under the update method, then inside the brackets we will check the distance of the enemy and its target which is the player. Also, if that distance is greater than the 'stoppingDistance' variable then the enemy can continue to move toward the player. However, if the distance is smaller the ling of code to tell the enymy to move toward the player won't run which stops the enemy from moving toward the player.
+- Add an if statement under the update method, then inside the brackets we will check the distance of the enemy and its target which is the player. Also, if that distance is greater than the 'stoppingDistance' variable then the enemy can continue to move toward the player. However, if the distance is smaller the line of code which tells the enemy to move toward the player won't run, which stops the enemy from moving toward the player.
 
  void Update()
  
@@ -90,7 +90,7 @@ void Start()
         }
     }
 
-## 3.Combing everything together 
+## 3. Combing everything together 
 - Add the 'EnemyFollow' scipt to the enemy by dragging the script in the add component section of the enemy.
 - Change the speed of the enemy to 10 under the Inspector window. 
 - Add the 'PlayerController' script to the player. 
