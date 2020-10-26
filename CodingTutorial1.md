@@ -68,5 +68,6 @@ void Update()
 }
 
 # 3. Combining everthing together
-- Add the scipt to the player by dragging the script in the add componet section of the player.
+- Add the scipt to the player by dragging the script in the add component section of the player.
+- Change the speed of the playe to 10 under the Inspector window. 
 - Test the character's movement by pressing any arrow key.
