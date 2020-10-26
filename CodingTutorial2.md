@@ -77,7 +77,7 @@ void Start()
 ## Update Method
 -  In the update method write transform.position this represents what position that you want the enemy to move. then set transform.position equal to Vector2.MoveTowards then inside the brackets say where you want the enemy to move from, to and at what speed. This is used to move the enemy character from his current position towards the target position(the player) at a fixed speed. Time.detltaTime is used to make sure that everything run smoothly. 
 
-- Add an if statement under the update method, then inside the brackets we will check the distance of the enemy and its target which is the player. if that distance is greater than the 'stoppingDistance' variable then the enemy can continue to move toward the player and if the distance is smaller the ling of code to tell the enymy to move toward the player won't run which stops the enemy from moving toward the player.
+- Add an if statement under the update method, then inside the brackets we will check the distance of the enemy and its target which is the player. Also, if that distance is greater than the 'stoppingDistance' variable then the enemy can continue to move toward the player and if the distance is smaller the ling of code to tell the enymy to move toward the player won't run which stops the enemy from moving toward the player.
 
  void Update()
  
