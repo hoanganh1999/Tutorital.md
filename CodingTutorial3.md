@@ -43,6 +43,8 @@ public class Enemy : MonoBehaviour
     }
  
  ### Update Function
+ #### If statement
+ - Inside the update function, create an if Statement
  
 
 
