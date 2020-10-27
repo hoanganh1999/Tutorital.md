@@ -48,7 +48,7 @@ public class PlayController : MonoBehaviour
 
 ## 2. The Coding part for the 2D Enemy AI Follow
 ### Creating variables
-- In the Script, under the public class make a public float variable called 'speed' this is used to control how fast does the enemy follow after the player in the scene. Then create a private transform variabel called 'target' this variable is used to hold the object that the enemy is supposed to run after. after this create a public float variable called 'stoppingDistance' this is used to stop the enemy from coming to too close to the player.
+- In the Script, under the public class make a public float called 'speed' this is used to control how fast does the enemy follow after the player in the scene. Then create a private transform called 'target' this variable is used to hold the object that the enemy is supposed to run after. after this create a public float called 'stoppingDistance' this is used to stop the enemy from coming to too close to the player.
 
 using System.Collections;
 
