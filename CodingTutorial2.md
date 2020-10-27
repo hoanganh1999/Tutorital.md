@@ -2,16 +2,16 @@
 This tutorial shows you how to create an enemy in unity which follow the player's character in a 2D space. This works by having the enemy tagging the player so whenever the player move the enemy will chase after the player. 
 ## 1. Creating a new scene
 
-- Start this by creating a new scene in new call 'Enemy Follow Scene'.
+- Start this by creating a new scene called 'Enemy Follow Scene'.
 - then create a folder called 'Art' under the project window. 
 - Then add 2 square sprites one called 'Player' and other called 'Enemy'.
-- Then change the colour of the 'Player' sprite to blue by clicking on the sprite, the go to Sprite Renderer then click on colour. Do the same thing with 'Enemy' sprite but change its colour to red.
+- Then change the colour of the 'Player' sprite to blue by clicking on the sprite, then go to Sprite Renderer then click on colour. Do the same thing with 'Enemy' sprite but change its Colour to red.
 - Go to the 'Player' sprite and under the Inspector window click on Tag and change it to player 
-- finally make a folder under the project windown called 'Scripts' by right click in assets windown, create, folder. after that, in the 'Scripts' folder create 2 scripts, one is called 'EnemyFollow' and the other one is called 'PlayerController'.
+- Finally, make a folder under the project window called 'Scripts' by right click in assets window, create, folder. after that, in the 'Scripts' folder create 2 scripts, one is called 'EnemyFollow' and the other one is called 'PlayerController'.
 
 ### Note: since this tutorial is all about 2D Enemy Follow AI, so I am just going to talk brieftly about the Player's movement Script. 
-- First add a Rigidbody 2D to the player then change the Body Type of the Rigidbody 2D from dynamic to kinematic.
-- Add the 'PlayerController' scipt to the player then change the speed of the player to 10.
+- First, add a Rigidbody 2D to the player then change the Body Type of the Rigidbody 2D from dynamic to kinematic.
+- Add the 'PlayerController' script to the player then change the speed of the player to 10.
 
 using System.Collections;
 
@@ -48,7 +48,7 @@ public class PlayController : MonoBehaviour
 
 ## 2. The Coding part for the 2D Enemy AI Follow
 ### Creating variables
-- In the Script, under the public class make a public float called 'speed' this is used to control how fast does the enemy follow after the player in the scenne. Then create a private transform called 'target' this vatiable is used to hold the obkect that the enemy is supposed to run after. after this create a public float called 'stoppingDistance' this this used to stop the enemy from coming to too close to the player.
+- In the Script, under the public class make a public float called 'speed' this is used to control how fast does the enemy follow after the player in the scene. Then create a private transform called 'target' this variable is used to hold the object that the enemy is supposed to run after. after this create a public float called 'stoppingDistance' this used to stop the enemy from coming to too close to the player.
 
 using System.Collections;
 
@@ -67,7 +67,7 @@ public class EnemyFollow : MonoBehaviour
     private Transform target;
 
 ### Start Method
-- At the start of the start method, we have to make the 'target' variable equal to the gameobject that has a tag called player and the transform information of the object. This will allow the enemy to find the gameobject that has a tag called player. 
+- At the start of the start method, we have to make the 'target' variable equal to the game object that has a tag called player and the transform information of the object. This will allow the enemy to find the game object that has a tag called player. 
 
 void Start()
 
@@ -77,7 +77,7 @@ void Start()
     }
 
 ### Update Method
--  In the update method write transform.position this represents what position that you want the enemy to move. Then set transform.position equal to Vector2.MoveTowards then inside the brackets state where you want the enemy to move from a position to another position and also at what speed. This is used to move the enemy character from his current position towards the target position(the player) at a fixed speed. Time.detltaTime is used to make sure that everything run smoothly. 
+-  In the update method write transform.position this represents what position that you want the enemy to move. Then set transform.position equal to Vector2.MoveTowards then inside the brackets state where you want the enemy to move from a position to another position and also at what speed. This is used to move the enemy character from his current position towards the target position(the player) at a fixed speed. Time.detltaTime is used to make sure that everything runs smoothly. 
 
 - Add an if statement under the update method, then inside the brackets we will check the distance of the enemy and its target which is the player. Also, if that distance is greater than the 'stoppingDistance' variable then the enemy can continue to move toward the player. However, if the distance is smaller the line of code which tells the enemy to move toward the player won't run, which stops the enemy from moving toward the player.
 
@@ -91,8 +91,8 @@ void Start()
     }
 
 ## 3. Combing everything together 
-- Add the 'EnemyFollow' scipt to the enemy by dragging the script in the add component section of the enemy.
+- Add the 'EnemyFollow' script to the enemy by dragging the script in the add component section of the enemy.
 - Change the speed of the enemy to 10 and change the Stopping distance to 3 under the Inspector window. 
 - Add the 'PlayerController' script to the player. 
-- Change the Tag of the player to player under the Inspector window.
+- Change the Tag of the character to player under the Inspector window.
 - Test out the 'EnemyFollow' script by moving the player to see if the enemy will follow the player or not. 
