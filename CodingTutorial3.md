@@ -122,7 +122,7 @@ public class Projectile : MonoBehaviour
 - In the update function, we want to make the projectile move straight toward the player's fixed position. The projectile will quicklu move toward the player's position doesnt matter if the player is still in teh same postion or not.
 - Next up, we will check if the projectile has reached the fixed position  by using a function called 'DestroyProjectile'
 
-#### OntriggerEnter2D Function that has a Collider 2D called 'Other'
+#### OnTriggerEnter2D Function that has a Collider 2D called 'Other'
 - We use this function to make sure that the projectile destroys itself when it makes contact with the player. We do this by using an if statement to say that if the projectile hit the object with tag 'Player', it will active the 'DestroyProjectile' function. which destroy the projectile.
 
 void OntriggerEnter2D(Collider2D other)
