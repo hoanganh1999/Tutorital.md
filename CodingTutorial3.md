@@ -46,6 +46,9 @@ public class Enemy : MonoBehaviour
  #### If statement
  - Inside the update function, create an if Statement and we will be using this if statement to check the distance between the player and the enemy. wee need to used this code "Vector2.Distance(transform.position, player.position)" to check the distance of the enemy and the player. also if the distance between these objects are larger than number of the 'stoppingDistance' variable then we want the enemy to move straight toward the player. Furthermore to make the enemy to move to the player, we need to set the enemy's current position euqal to the player's position. After this set the position of the enemy, the player,the speed of the enemy inside the brackets and times everything with Time.deltaTime to make sure that everything run smoothly "transform.position = Vector2.MoveTowards(transform.position, player.position, speed * Time.deltaTime);".
  
+ #### Else if statement
+ - Inside the update function we need to used to else if statement to check if the enemy is too closed to the player, the enemy will stop moving toward the player. we will used the same line of code "(Vector2.Distance(transform.position, player.position) < retreatDistance)" to check for the 'retreatDistance' instead of the 'stoppingDistance' 
+ 
 
 
 
