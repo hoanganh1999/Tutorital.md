@@ -85,7 +85,9 @@ public class Enemy : MonoBehaviour
 
     }
  
- 
+ ## 3. Coding part 2 (for the prijectile)
+ Create another Script called 'Projectile' in the Scripts folder
+ ### creating the variable
  
 
 
