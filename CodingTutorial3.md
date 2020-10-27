@@ -54,6 +54,39 @@ public class Enemy : MonoBehaviour
  #### Else if Statement
  - This is else if statement is used to check if the distance seperating the player and the enemy than the value of the 'retreatDistance' variable. If it is then we need to used the "transform.position = Vector2.MoveTowards(transform.position, player.position, -speed * Time.deltaTime);"  this means that when the enemy is too closed to the player, it will simply back away from the player.
  
+ #### If Statement
+ - This if statement is used to check if the 'timeBtwShots'is less than or equal to 0. If it is then the enemy will spawn a projectile. If it isn't we will deacrease the number by setting the 'timeBtwShots' is less than or equal Time.deltaTime. To do this, we need to use Instantiate to spawn the projectile at the enemy's postion with no rotation "Instantiate(Projectile, transform.position, Quaternion.identity);". then underneath this code, set 'timeBtwShots' equal to 'startTimeBtwShots' to make sure that the nemy doesn't spawn projectile 60 times per second. Everything in the update function should look like this if you have done it right:
+ 
+ void Update()
+    {
+    
+        if(Vector2.Distance(transform.position, player.position) > stoppingDistance){
+
+            transform.position = Vector2.MoveTowards(transform.position, player.position, speed * Time.deltaTime);
+
+        } else if (Vector2.Distance(transform.position, player.position) < stoppingDistance && Vector2.Distance(transform.position, player.position) > retreatDistance){
+
+            transform.position = this.transform.position;
+
+        } else if(Vector2.Distance(transform.position, player.position) < retreatDistance){
+
+            transform.position = Vector2.MoveTowards(transform.position, player.position, -speed * Time.deltaTime);
+        }
+
+        if (timeBtwShots <= 0){
+
+            Instantiate(Projectile, transform.position, Quaternion.identity);
+            timeBtwShots = startTimeBtwShots;
+
+        } else {
+
+            timeBtwShots -= Time.deltaTime;
+        }
+
+    }
+ 
+ 
+ 
 
 
 
