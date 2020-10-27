@@ -33,7 +33,8 @@ public class Enemy : MonoBehaviour
     
  ### Starting Function
  - In the starting function set the 'player' variable equal to the position of the game object that has the tag called 'Player' by using this line of code "player = GameObject.FindGameObjectWithTag("Player").transform;". 
-Then set the 'timeBtwShots' equal to the 'startTimeBtwShots' this is a crutial part of the code, if you don't put this line of code here the enemy will shoot out the projectile in total of 60 times per second. if this is done correctly, it should look like this:
+
+- Then set the 'timeBtwShots' equal to the 'startTimeBtwShots' this is a crutial part of the code, if you don't put this line of code here the enemy will shoot out the projectile in total of 60 times per second. if this is done correctly, it should look like this:
  
    void Start()
     {
