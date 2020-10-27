@@ -85,26 +85,67 @@ public class Enemy : MonoBehaviour
 
     }
  
- ## 3. Coding part 2 (for the prijectile)
- Create another Script called 'Projectile' in the Scripts folder
- ### creating the variable
+ }
  
+ ## 3. Coding part 2 (for the projectile)
+ Create another Script called 'Projectile' in the Scripts folder
+ ### creating the variables
+ - First we need to create a public float called 'speed' to control the speed of the projectile. ALso, we will create a private transform called 'Player' and a private vector2 called 'target'. if this is done correctly, it should look like this:
+ 
+using System.Collections;
 
+using System.Collections.Generic;
 
+using UnityEngine;
 
+public class Projectile : MonoBehaviour
+{
 
+    public float speed;
 
+    private Transform player;
+    private Vector2 target;
 
+### Start Function
+- In the start function we need to set the 'player' variable equal to the game object in the scene that has a tag named 'Player' and the transform of that object it should look like this "player = GameObject.FindGameObjectWithTag("Player").transform;".
+- Set the target varible equal to the players X and Y coordinates, this means that the variable is equal to the position of the player when the enemy spawn a projectile.  
 
+ void Start()
+    {
+    
+        player = GameObject.FindGameObjectWithTag("Player").transform;
 
+        target = new Vector2(player.position.x, player.position.y);
+    }
 
+### Update Function 
+- In the update function, we want to make the projectile move straight toward the player's fixed position. The projectile will quicklu move toward the player's position doesnt matter if the player is still in teh same postion or not.
+- Next up, we will check if the projectile has reached the fixed position  by using a function called 'DestroyProjectile'
 
+#### OntriggerEnter2D Function that has a Collider 2D called 'Other'
+- We use this function to make sure that the projectile destroys itself when it makes contact with the player. We do this by using an if statement to say that if the projectile hit the object with tag 'Player', it will active the 'DestroyProjectile' function. which destroy the projectile.
 
+void OntriggerEnter2D(Collider2D other)
+{
 
+        if (other.CompareTag("Player")){
+            DestroyProjectile();
+        }
+    }
 
+#### DestroyProjectile Function
+- Inside this function, we need to write "DestroygameObject" to destroy the projectile when it reaches its final postion.
 
+void DestroyProjectile(){
 
+        Destroy(gameObject);
+    }
+}
 
-
-
+## 4. Combining everything 
+- Add the 'Projectile' script to the projectile prefab(red circle) by dragging it in the add components section of the projectile. Also change the speed of the projectile to 10 under the Inspector window.
+- Add the 'Enemy' script to the enemy by dargging the script in the add component section of the enemy
+- Change the speed of the enemy to 4, the stopping distance to 7, the retreat distance to 5, the start time Btw shots to 2 under the Inpector window. Also, drag the project tile prefab to the empty slot called 'Projectile'.
+- Tag the character with the 'Player' tag under the Inspector window.
+- Test out the game by moving the character around and see if the enemy shoot the projectile at the player or not. Also to see if the enemy move away from the player if he/she is near it ot not. 
 
