@@ -58,7 +58,7 @@ void Update()
     }
 
 ## FixedUpdate Method
--All the script above is only for gathering player's input and to use this input to move the character in the environment by putting rb in the FixedUpdate Method and call the built in MovePosition funtion. Inside the bracket, state the current position of the player and add 'moveVelocity' to this position and time everything by Time.deltaTime. This is to make sure that the game run smoothly as long as the player hold down the arrow key. 
+- All the script above is only for gathering player's input and to use this input to move the character in the environment by putting rb in the FixedUpdate Method and call the built in MovePosition funtion. Inside the bracket, state the current position of the player and add 'moveVelocity' to this position and time everything by Time.deltaTime. This is to make sure that the game run smoothly as long as the player hold down the arrow key. 
 
  void FixedUpdate()
     {
