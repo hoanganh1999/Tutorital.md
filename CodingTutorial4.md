@@ -1,6 +1,6 @@
 # Health System Tutorial 
 This tutorital will show you how to make a simple health system.
-## 1.Creating a new scene 
+## 1. Creating a new scene 
 - Begin this tutorial by making a new scene called 'Health System'
 - Make an empty game object called 'Player' by right-clicking under hierarchy and create an empty game object. 
 - In photoshop or any other art programs, make 2 hearts, one is empty and the other is fulled(you can fill the heart with any colours). In this case, I will use red colour for my heart.
@@ -10,7 +10,7 @@ This tutorital will show you how to make a simple health system.
 - After that make 10 red hearts(The number of hearts depends on the character's health) in the scene.
 - Then create a folder called 'Scripts' and inside that folder make a new script called 'Health' by right-clicking inside the folder, then create, C# script.
 
-## 2.Coding part
+## 2. Coding part
 ### Creating Variables
 - In the Script, type in 'using UnityEngine.UI;' near the top section of the script.
 - In the new script, under Public Class, make a public int called 'health', we will be using this variable to control the number of red hearts of the player in the scene. After this make another public int called 'numOfHearts', this variable is used to control the number of hearts container(empty hearts) in the scene. Then create a public images array called 'hearts' to store the heart images. After this, create a public sprite called FullHeart to store the red heart sprite and finally make a public sprite called 'EmptyHeart' to store the empty heart sprite.
@@ -65,7 +65,7 @@ public class Health : MonoBehaviour
     }
 }
 
-## 3.Putting everything together
+## 3. Putting everything together
 - Add the 'Heath' script to the player by dragging it in the add components section of the player. 
 - Change the Health to 6 and change the Num Of Hearts to 8 to under Health(Script), after lock the Inspector window so we can drag all the heart images to the array easier. Change the Num Of Hearts and the Health as you like to test out the code.
 - Then drag the red heart inside the Full Heart slot and drag the empty heart to the Empty Heart slot under the Inspector window.
