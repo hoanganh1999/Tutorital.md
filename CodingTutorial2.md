@@ -1,5 +1,5 @@
 # 2D Enemy Follow AI
-This tutorial shows you how to create an enemy in unity which follow the player's character in a 2D space. This works by having the enemy tagging the player so whenever the player move the enemy will chase after the player. 
+This tutorial shows you how to create an enemy in unity which follows the player's character in a 2D space. This works by having the enemy tagging the player so whenever the player move the enemy will chase after the player. 
 ## 1. Creating a new scene
 
 - Start this by creating a new scene called 'Enemy Follow Scene'.
